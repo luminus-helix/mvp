@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+    <script type="text/javascript">
+        var config = {
+
+            apiKey: "AIzaSyDjTW7u-MEvRJWDXOIl-3RpgyLb2iDfsdk",
+            authDomain: "luminus-test.firebaseapp.com",
+            databaseURL: "https://luminus-test.firebaseio.com",
+            storageBucket: "luminus-test.appspot.com"
+        };
+
+        firebase.initializeApp(config);
+
+        var database = firebase.database();
+    </script>
+
+    <meta charset="utf-8">
+    <link href="styling/main.css" rel="stylesheet" />
+    <title>Lumibaby </title>
+</head>
+
+<body>
+
+    <!--
+<div id="pagination">
+    <span class="pagination-primary">
+        <a onclick="screenMove('log')">o</a>
+        <a onclick="screenMove('main')">o</a>
+        <a onclick="screenMove('cart')">o</a>
+    </span>
+</div>-->
+
+    <!-- Main "container" -->
+    <div id="wrapper">
+        <div class="wrapper-screen-container" style="background:#fff;">
+            <div id="screen-main" class="wrapper-screen screen-main" style="background:#fff;">
+                <header>
+                    <div class="page-banner">
+                        <div class="page-banner-styling"></div>
+                        <h1 class="title">Luminus</h1>
+                        <br><br><br><br>
+                        <!--
+                    IMPLEMENT FUZZY SEARCH here later on; include 'smart' item selection (bring up items in room data attr only, maybe consider user log history if quick enough to query that live? or implement preferentials for the most commonly-selected items)
+
+                    Make a room-based selection
+                            <form id="search-items">
+                            <input type="text" placeholder="Search items... (not working!)" />
+                        </form>-->
+                    </div>
+                </header>
+                <div id="item-list"><br><br>
+
+                    <center>
+                        <h2 class="title">Select an Item</h2>
+
+                        <a onclick="resetLight()" style='background:red;padding:1em;border-radius:15px;margin-bottom:2em !important;'>Reset Light Values</a><br><br>
+
+                        <div id="item-log"></div>
+
+
+                    </center>
+                </div>
+            </div>
+
+            <!-- Log Screen -->
+            <div id="screen-log" class="wrapper-screen screen-log">
+                <center>
+
+                    <div id="log-transactions">
+
+                        <h2 class="title">Log History</h2>
+                        <center>
+                            <div id="log-wrapper">
+                                <div class="log-container" data-byuser="user" data-transactionid="id">
+                                    <h3>Transaction time: </h3>
+                                    <div id="log-inner-items" class="log-inner log-inner-items">
+
+
+                                    </div>
+                                    <span class="log-inner log-inner-details">
+                                        <span style="align:left;">Attending Physician: <span class="log-inner log-inner-value log-value-user">dr john huston</span></span>
+
+
+                                        <span style="align:right;">Transaction Key: <span class="log-inner log-inner-value log-value-key">sample trans key</span></span>
+
+                                    </span>
+
+                                </div>
+                            </div>
+                        </center>
+
+                    </div>
+                </center>
+                <br><br>
+                <h3>Non-console Administrative Things</h3>
+                <div class="temp-special">
+                    <a onclick="temp('clearlog')">Clear all logs</a>
+                </div>
+
+            </div>
+
+            <!-- Cart Screen -->
+            <div id="screen-cart" class="wrapper-screen screen-cart" style="text-align:center;background:#f6f6f9">
+                <header>
+                    <div class="page-banner">
+                        <h1 class="title">Selected Items</h1>
+                    </div>
+                </header>
+
+                <h2 class="title">Saved Items</h2>
+                <div class='cart-options cart-options-wrapper'>
+                    <a onclick="writeLog();" class="cart-option-button">Confirm Selection</a>
+                </div>
+
+                <div id="saved-log" style="widthz:450px;text-align: center;align-items: center; border:1px solid #ccc;margin:1em;"></div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+    <script src="app/test.js"></script>
+</body>
+
+</html>
