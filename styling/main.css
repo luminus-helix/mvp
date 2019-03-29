@@ -193,7 +193,6 @@ body {
 }
 
 .page-banner input {
-    ;
     width: 90%;
     max-width: 300px;
     margin: 20px auto;
@@ -208,7 +207,7 @@ body {
 }
 
 .page-banner-styling {
-    border-top: 10em solid #ffffff;
+    border-top: 10em solid none;
     height: 100px;
     z-index: -100;
     position: absolute;
@@ -216,6 +215,18 @@ body {
     background-size: cover;
     background-position: bottom center;
     pointer-events: none;
+}
+
+
+/* LANDING: ITEM SELECTION */
+
+#selection-area {
+    position: fixed;
+    height: 200px;
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    transform: translateY(0%);
 }
 
 
