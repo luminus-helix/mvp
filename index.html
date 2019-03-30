@@ -17,7 +17,6 @@
         firebase.initializeApp(config);
 
         var database = firebase.database();
-
     </script>
 
     <meta charset="utf-8">
@@ -47,21 +46,22 @@
 
 
         <div class="wrapper-screen-two" style="display:block;">
-            <div id="screen-log" class="wrapper-screen screen-log">
-                <center>
-                    <div id="log-transactions">
+            <div id="screen-log" class="wrapper-screen screen-log" style="height:100%;">
 
-                        <h2 class="title">Confirmation</h2>
-                        <center><br>
-                            <i class='fa  fa-lightbulb-o' style="font-size:90px;color:#e5a449;"></i>
-                            <h2>The lights are being switched on!</h2>
-                            <div id="log-wrapper">
-                                <div class="log-container" data-byuser="user" data-transactionid="id">
-                                    <div id="log-inner-items" class="log-inner log-inner-items" style="">
+                <div id="log-transactions" style="position:relative;height:80%;min-height:500px;display:block;">
+
+                    <center><br><br><br>
+                        <i class='fa  fa-lightbulb-o' style="font-size:128px;color:#e5a449;"></i>
+                        <h2 style="font-size:42px;">The lights are being switched on!</h2>
+
+                        <h3>Your selection:</h3>
+                        <div id="log-wrapper">
+                            <div class="log-container" data-byuser="user" data-transactionid="id">
+                                <div id="log-inner-items" class="log-inner log-inner-items" style="">
 
 
-                                    </div>
-                                    <!-- <span class="log-inner log-inner-details">
+                                </div>
+                                <!-- <span class="log-inner log-inner-details">
                                         <span style="align:left;">Attending Physician: <span class="log-inner log-inner-value log-value-user">dr john huston</span></span>
 
 
@@ -69,15 +69,20 @@
 
                                     </span>-->
 
-                                </div>
-                                <br><br> <br>
-                                <a onclick="closeLog();" class="confirm-and-close">I'm done <i class='fa fa-check-circle-o'></i></a>
-
                             </div>
-                        </center>
+                            <br><br> <br>
 
-                    </div>
+
+                        </div>
+                    </center>
+
+                </div>
+
+                <center>
+                    <div style="display:block;">
+                        <a onclick="closeLog();" class="confirm-and-close">I'm done <i class='fa fa-check-circle-o'></i></a></div>
                 </center>
+
                 <!--
                 <br><br>
                 <h3>Non-console Administrative Things</h3>

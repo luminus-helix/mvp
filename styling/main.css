@@ -264,8 +264,7 @@ body {
 .item-container {
     background: #fff;
     display: inline-block;
-    width: 250px;
-    min-width: 45%;
+    min-width: 350px;
     min-height: 150px;
     padding: .8em;
     margin: 1.5em .8em 1.5em .8em;
@@ -274,7 +273,7 @@ body {
 }
 
 .item-container h1 {
-    font-size: 27px;
+    font-size: 4.6em;
     padding: .2em;
     margin: 0;
 }
@@ -363,7 +362,7 @@ body {
     line-height: 10px;
     font-family: "Sailec";
     display: inline-block;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: bold;
     background: #f4f5f7;
 }
@@ -411,7 +410,7 @@ body {
     border-radius: 5px;
     border: 0;
     margin-top: .3em;
-    height: 40px;
+    height: 50px;
 }
 
 
@@ -511,6 +510,10 @@ body {
 
 
 /* LOG DETAILS */
+
+#log-transactions {
+    height: 70%;
+}
 
 #log-inner-items {
     max-height: 500px;

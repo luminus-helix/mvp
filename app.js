@@ -39,7 +39,23 @@ function createItemdb() {
     trans_items.once("value", function (snapshot) {
         var logcontent = [];
         snapshot.forEach(function (childSnapshot) {
-            logcontent = "<div class='log-container' data-byuser='foo' data-transactionid='" + childSnapshot.key + "'>" + "<h3>Transaction time:" + childSnapshot.child("time").val() + "</h3><div id='log-inner-items' class='log-inner log-inner-items'></div> " + "<span class='log-inner log-inner-details'>" + "<span class='log-inner log-inner-value log-value-user'>" + "Physician Name" + "</span>" + "<span class='log-inner log-inner-value log-value-key'>" + childSnapshot.key + "</span></span></div></div>";
+
+            function msToTime(duration) {
+                var milliseconds = parseInt((duration % 1000) / 100),
+                    seconds = Math.floor((duration / 1000) % 60),
+                    minutes = Math.floor((duration / (1000 * 60)) % 60),
+                    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+                hours = (hours < 10) ? "0" + hours : hours;
+                minutes = (minutes < 10) ? "0" + minutes : minutes;
+                seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+                return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+            }
+
+            thetime = msToTime(childSnapshot.child("time").val());
+
+            logcontent = "<div class='log-container' data-byuser='foo' data-transactionid='" + childSnapshot.key + "'>" + "<h3>Transaction time: " + thetime + "</h3><div id='log-inner-items' class='log-inner log-inner-items'></div> " + "<span class='log-inner log-inner-details'>" + "<span class='log-inner log-inner-value log-value-user'>" + "Physician Name" + "</span>" + "<span class='log-inner log-inner-value log-value-key'>" + childSnapshot.key + "</span></span></div></div>";
 
             // Prepend shows transactions chronologically, latest one appearing at the top (hopefully)
             $("#log-wrapper").prepend(logcontent);
@@ -70,7 +86,7 @@ function logFormatter(id, light, name, price, qty, datapos) {
 
 
 function logHistoryFormatter(id, light, name, price, qty) {
-    var dlgasdgl = "<div class='item-list item-list-log item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
+    var dlgasdgl = "<div style='display:block;' class='item-list item-list-log item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
     return dlgasdgl;
 }
 
@@ -328,7 +344,25 @@ function displayLogentry(transkey) {
         thetime = snapshot.val();
     });
 
-    var logcontent = "<div class='log-container' data-byuser='foo' data-transactionid='" + transkey + "'>" + "<h3>Transaction time:" + thetime + "</h3><div id='log-inner-items' class='log-inner log-inner-items'></div> " + "<span class='log-inner log-inner-details'>" + "<span class='log-inner log-inner-value log-value-user'>" + "Physician Name" + "</span>" + "<span class='log-inner log-inner-value log-value-user'>" + transkey + "</span></span></div></div>"
+    function msToTime(duration) {
+        var milliseconds = parseInt((duration % 1000) / 100),
+            seconds = Math.floor((duration / 1000) % 60),
+            minutes = Math.floor((duration / (1000 * 60)) % 60),
+            hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+    }
+
+    thetime = msToTime(thetime);
+
+    var logcontent = "<div class='log-container' data-byuser='foo' data-transactionid='" + transkey + "'>" + "<h3>Transaction time: " + thetime + "</h3><div id='log-inner-items' class='log-inner log-inner-items'></div> " + "<span class='log-inner log-inner-details'></span></div></div>"
+
+    /*
+    var logcontent = "<div class='log-container' data-byuser='foo' data-transactionid='" + transkey + "'>" + "<h3>Transaction time:" + thetime + "</h3><div id='log-inner-items' class='log-inner log-inner-items'></div> " + "<span class='log-inner log-inner-details'>" + "<span class='log-inner log-inner-value log-value-user'>" + "Physician Name" + "</span>" + "<span class='log-inner log-inner-value log-value-user'>" + transkey + "</span></span></div></div>"*/
 
     $("#log-wrapper").prepend(logcontent);
 
@@ -397,5 +431,20 @@ function closeLog() {
         writeitemcheck = 0;
         $("#saved-log").text("");
     }
+
+
+    var db_items = database.ref('items/');
+    db_items.once("value", function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+            var itemo = childSnapshot.val();
+            //Reset lights, just in case
+            childSnapshot.ref.update({
+                light: 0
+            });
+            itemdata.push(itemo);
+            console.log("TURNING LIGHTS OFF");
+        })
+    })
+
 
 }
