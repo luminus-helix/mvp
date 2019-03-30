@@ -326,6 +326,9 @@ body {
 }
 
 
+.item-inner-select {
+    padding-top: 1em !important;
+}
 
 .item-inner-option {
     margin-bottom: .3em;
@@ -338,9 +341,6 @@ body {
     background: #f4f5f7;
 }
 
-.item-inner-option:hover {
-    color: #e3e5e8;
-}
 
 .item-option-sub {
     display: block;
@@ -348,6 +348,25 @@ body {
     border: 0;
     font-family: "Sailec";
     background: 0;
+    font-size: 11px;
+
+}
+
+.item-option-sub:hover {
+    color: #c4644c
+}
+
+.item-option-add:hover {
+    color: #494638;
+    background: #DCE35B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #45B649, #DCE35B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #45B649, #DCE35B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+
 
 }
 
@@ -364,7 +383,7 @@ body {
     width: 250px;
     border-radius: 5px;
     border: 0;
-    margin-top: .6em;
+    margin-top: .3em;
     height: 40px;
 }
 
