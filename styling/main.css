@@ -228,7 +228,9 @@ body {
     text-align: center;
     align-items: center;
     border: 1px solid #ccc;
-    margin: 1em;
+    margin: 1.3em;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 
@@ -240,13 +242,12 @@ body {
     min-width: 45%;
     min-height: 150px;
     padding: .3em;
-    border-radius: 10px;
     margin: 1em .8em .8em .8em;
 }
 
 .item-container h1 {
-    padding-top: 40px !important;
-    font-size: 32px;
+    padding-top: 30px !important;
+    font-size: 27px;
     padding: .2em;
     margin: 0;
 }
@@ -267,13 +268,15 @@ body {
 }
 
 
+
 .item-container .item-stat-price label {
     color: #e9a552;
+    clear: both;
 }
 
 .item-stat-qty,
 .item-stat-price {
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .item-stat-qty {
@@ -298,11 +301,12 @@ body {
     border-bottom: 1px solid #8d8e91;
     font-family: "Roboto Mono";
     float: left;
-    display: inline-block;
+    display: block;
     width: 70px;
-    height: 20px;
+    height: 15px;
     margin-left: .3em;
-    padding: .5em;
+    margin-bottom: .3em;
+    padding: .2em;
     text-shadow: 0 0 20px #ccc;
     color: #626067;
 }
@@ -312,32 +316,56 @@ body {
     font-family: "Roboto Mono";
     float: right;
     margin-right: .3em;
+    margin-bottom: .3em;
     display: inline-block;
     width: 70px;
-    height: 20px;
-    padding: .5em;
+    height: 15px;
+    padding: .1em;
     text-shadow: 0 0 20px #ccc;
     color: #626067;
 }
+
 
 
 .item-inner-option {
     margin-bottom: .3em;
     padding: .8em;
     line-height: 10px;
+    font-family: "Sailec";
     display: inline-block;
-    width: 60px;
-    margin-top: 1.4em;
-    height: 60px;
-    border-radius: 100%;
-    font-size: 23px;
+    font-size: 14px;
     font-weight: bold;
     background: #f4f5f7;
 }
 
 .item-inner-option:hover {
-    background: #a4a8ad;
     color: #e3e5e8;
+}
+
+.item-option-sub {
+    display: block;
+    color: #ccc;
+    border: 0;
+    font-family: "Sailec";
+    background: 0;
+
+}
+
+.item-option-add {
+    background: #00b09b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #96c93d, #00b09b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #96c93d, #00b09b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    clear: both;
+    color: #fff;
+    display: inline-block;
+    width: 250px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: .6em;
+    height: 40px;
 }
 
 
@@ -390,11 +418,27 @@ body {
 .selection-area-button {
     display: inline-block;
     width: 20%;
+    font-size: 22px;
     height: 100%;
     text-align: center;
     line-height: 180px;
-    background: #3946ce;
+    background: #e8a23a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #e8a23a, #f2cd6f);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #e8a23a, #f2cd6f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: #fff;
+    float: right;
+}
+
+.selection-area-button:hover {
+
+    background: #66b745;
+    background: -webkit-linear-gradient(to top, #66b745, #24a04c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #66b745, #24a04c);
 }
 
 /*
@@ -483,10 +527,9 @@ body {
 
 #saved-log {
     text-align: center;
-    width: 80%;
+    width: 75%;
     height: 100%;
     float: left;
-    border-right: 1px solid #ccc;
 }
 
 #saved-log .item-container {
