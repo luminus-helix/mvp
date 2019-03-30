@@ -17,6 +17,7 @@
         firebase.initializeApp(config);
 
         var database = firebase.database();
+
     </script>
 
     <meta charset="utf-8">
@@ -70,11 +71,11 @@
             </div>
             <div id="selection-area">
 
-                <!-- Change saved log display to remove item price, do more condensed listing-->
-                <div id="saved-log" class="bottom-portion" style=""></div>
+                <!-- Change saved log display to remove item price, do more condensed listing--><br><br>
+                <div id="saved-log" class="bottom-portion" style="">
+                </div>
 
-
-                <a href="#" align="right" class="selection-area-button">Confirm</a>
+                <a onclick="writeLog();" align="right" class=" selection-area-button">Confirm</a>
             </div>
 
 
@@ -126,7 +127,7 @@
 
                 <h2 class="title">Saved Items</h2>
                 <div class='cart-options cart-options-wrapper' style='float:right;'>
-                    <a onclick="writeLog();" class="cart-option-button">Confirm Selection</a>
+                    <!--   <a onclick="writeLog();" class="cart-option-button">Confirm Selection</a>-->
                 </div>
 
                 <div id="saved-log" style="widthz:450px;text-align: center;align-items: center; border:1px solid #ccc;margin:1em;"></div>

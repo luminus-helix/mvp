@@ -224,7 +224,7 @@ function writeLog() {
     console.log(transkey);
     database.ref('users/foo/transaction/' + transkey).child('time').set(thetime);
     database.ref('users/foo/transaction/' + transkey).child('light').set(1);
-    $("#saved-log > .item-container").each(function () {
+    $("#saved-log > .item-list").each(function () {
         tempitemid = $(this).attr('data-itemid');
         var newqty = $(this).attr('data-itemqty');
         console.log(tempitemid);

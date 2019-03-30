@@ -347,9 +347,9 @@ body {
 
 .item-list {
     display: inline-block;
-    width: 300px;
+    width: 250px;
     height: 30px;
-    margin: .6em;
+    margin: 1em .6em 1em .6em;
 }
 
 
@@ -365,6 +365,7 @@ body {
 
 .item-list .item-stat-qty {
     float: right;
+    font-size: 11px;
 }
 
 /* form*/
@@ -485,7 +486,7 @@ body {
     width: 80%;
     height: 100%;
     float: left;
-    background: red;
+    border-right: 1px solid #ccc;
 }
 
 #saved-log .item-container {
