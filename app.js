@@ -64,7 +64,7 @@ function itemFormatter(id, light, name, price, qty, datapos) {
 
 
 function logFormatter(id, light, name, price, qty, datapos) {
-    var dlgasdgl = "<div class='item-container item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
+    var dlgasdgl = "<div class='item-list item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
     return dlgasdgl;
 }
 
