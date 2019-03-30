@@ -17,10 +17,13 @@
         firebase.initializeApp(config);
 
         var database = firebase.database();
+
     </script>
 
     <meta charset="utf-8">
     <link href="styling/main.css" rel="stylesheet" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Lumibaby </title>
 </head>
 
@@ -36,7 +39,56 @@
 </div>-->
 
     <!-- Main "container" -->
+
+
+
+
     <div id="wrapper">
+
+
+        <div class="wrapper-screen-two" style="display:block;">
+            <div id="screen-log" class="wrapper-screen screen-log">
+                <center>
+                    <div id="log-transactions">
+
+                        <h2 class="title">Confirmation</h2>
+                        <center><br>
+                            <i class='fa  fa-lightbulb-o' style="font-size:90px;color:#e5a449;"></i>
+                            <h2>The lights are being switched on!</h2>
+                            <div id="log-wrapper">
+                                <div class="log-container" data-byuser="user" data-transactionid="id">
+                                    <div id="log-inner-items" class="log-inner log-inner-items" style="">
+
+
+                                    </div>
+                                    <!-- <span class="log-inner log-inner-details">
+                                        <span style="align:left;">Attending Physician: <span class="log-inner log-inner-value log-value-user">dr john huston</span></span>
+
+
+                                        <span style="align:right;">Transaction Key: <span class="log-inner log-inner-value log-value-key">sample trans key</span></span>
+
+                                    </span>-->
+
+                                </div>
+                                <br><br> <br>
+                                <a onclick="closeLog();" class="confirm-and-close">I'm done <i class='fa fa-check-circle-o'></i></a>
+
+                            </div>
+                        </center>
+
+                    </div>
+                </center>
+                <!--
+                <br><br>
+                <h3>Non-console Administrative Things</h3>
+                <div class="temp-special">
+                    <a onclick="temp('clearlog')">Clear all logs</a>
+                </div>-->
+
+            </div>
+
+        </div>
+
         <div class="wrapper-screen-container" style="background:#fff;">
             <div class="screen-main-container">
                 <div id="screen-main" class="wrapper-screen screen-main">
@@ -68,55 +120,21 @@
 
                 </div>
             </div>
+
+
             <div id="selection-area">
 
                 <!-- Change saved log display to remove item price, do more condensed listing-->
                 <div id="saved-log" class="bottom-portion" style="">
                 </div>
 
-                <a onclick="writeLog();" align="right" class="selection-area-button"><img src="https://i.imgur.com/TSjT9Gu.png" alt="Confirm" title="Confirm Selection" style="width:150px;margin-top:.6em;"></a>
+                <a onclick="writeLog();" align="right" class="selection-area-button"><i class="fa fa-chevron-circle-right" style="font-size:52px;margin-top:1em;"></i></a>
             </div>
 
 
-
-            <!-- Log Screen -->
-            <!--<div id="screen-log" class="wrapper-screen screen-log">
-                <center>
-
-                    <div id="log-transactions">
-
-                        <h2 class="title">Log History</h2>
-                        <center>
-                            <div id="log-wrapper">
-                                <div class="log-container" data-byuser="user" data-transactionid="id">
-                                    <h3>Transaction time: </h3>
-                                    <div id="log-inner-items" class="log-inner log-inner-items">
-
-
-                                    </div>
-                                    <span class="log-inner log-inner-details">
-                                        <span style="align:left;">Attending Physician: <span class="log-inner log-inner-value log-value-user">dr john huston</span></span>
-
-
-                                        <span style="align:right;">Transaction Key: <span class="log-inner log-inner-value log-value-key">sample trans key</span></span>
-
-                                    </span>
-
-                                </div>
-                            </div>
-                        </center>
-
-                    </div>
-                </center>
-                <br><br>
-                <h3>Non-console Administrative Things</h3>
-                <div class="temp-special">
-                    <a onclick="temp('clearlog')">Clear all logs</a>
-                </div>
-
-            </div>-->
-
             <!-- Cart Screen -->
+
+            <!--
             <div id="screen-cart" class="wrapper-screen screen-cart" style="text-align:center;background:#f6f6f9">
                 <header>
                     <div class="page-banner">
@@ -126,13 +144,13 @@
 
                 <h2 class="title">Saved Items</h2>
                 <div class='cart-options cart-options-wrapper' style='float:right;'>
-                    <!--   <a onclick="writeLog();" class="cart-option-button">Confirm Selection</a>-->
+                       <a onclick="writeLog();" class="cart-option-button">Confirm Selection</a>
                 </div>
 
                 <div id="saved-log" style="widthz:450px;text-align: center;align-items: center; border:1px solid #ccc;margin:1em;"></div>
 
 
-            </div>
+            </div>-->
         </div>
     </div>
 

@@ -70,7 +70,7 @@ function logFormatter(id, light, name, price, qty, datapos) {
 
 
 function logHistoryFormatter(id, light, name, price, qty) {
-    var dlgasdgl = "<div class='item-container item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
+    var dlgasdgl = "<div class='item-list item-list-log item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><h1 id='item-inner-name'>" + name + "</h1><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div><br></div>";
     return dlgasdgl;
 }
 
@@ -262,6 +262,11 @@ function writeLog() {
     console.log("Clearing selection...");
     $("#saved-log").html("");*/
     //  return database.ref('users/foo/transaction/' + transkey).child("time").set(thedate);
+
+
+    // Fade in screen
+    $('.wrapper-screen-two').fadeIn("slow");
+
 };
 
 
@@ -343,8 +348,9 @@ function displayLogentry(transkey) {
 
 
 /* DOM BEHAVIOR */
-$('#screen-log').hide();
-$('#screen-cart').hide();
+
+/*$('#screen-log').hide();
+$('#screen-cart').hide();*/
 
 
 function screenMove(screen) {
@@ -382,4 +388,13 @@ function screenMove(screen) {
             break;
 
     }
+}
+
+function closeLog() {
+    $('.wrapper-screen-two').fadeOut("slow");
+    if (writeitemcheck = 1) {
+        writeitemcheck = 0;
+        $("#saved-log").text("");
+    }
+
 }
