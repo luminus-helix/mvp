@@ -88,30 +88,6 @@ body {
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Termina';
-    src: url('../fonts/Termina-Heavy.eot');
-    src: url('../fonts/Termina-Heavy.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Termina-Heavy.woff2') format('woff2'),
-        url('../fonts/Termina-Heavy.woff') format('woff'),
-        url('../fonts/Termina-Heavy.ttf') format('truetype'),
-        url('../fonts/Termina-Heavy.svg#Termina-Heavy') format('svg');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Termina Demi';
-    src: url('../fonts/Termina-Demi.eot');
-    src: url('../fonts/Termina-Demi.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Termina-Demi.woff2') format('woff2'),
-        url('../fonts/Termina-Demi.woff') format('woff'),
-        url('../fonts/Termina-Demi.ttf') format('truetype'),
-        url('../fonts/Termina-Demi.svg#Termina-Demi') format('svg');
-    font-weight: 600;
-    font-style: normal;
-}
-
 
 
 /* SCREEN */
@@ -370,21 +346,25 @@ body {
 
 
 .item-list {
-    background: #fff;
     display: inline-block;
     width: 300px;
-    height: 40px;
+    height: 30px;
+    margin: .6em;
 }
 
 
 .item-list h1 {
     font-size: 18px;
     margin: .2em;
+    float: left;
 }
 
-.item-list .item-stat-qty,
 .item-list .item-stat-price {
     display: none;
+}
+
+.item-list .item-stat-qty {
+    float: right;
 }
 
 /* form*/
@@ -404,6 +384,16 @@ body {
     color: #fff;
     padding: 1.3em;
     margin: 1em;
+}
+
+.selection-area-button {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 180px;
+    background: #3946ce;
+    color: #fff;
 }
 
 /*
@@ -492,6 +482,10 @@ body {
 
 #saved-log {
     text-align: center;
+    width: 80%;
+    height: 100%;
+    float: left;
+    background: red;
 }
 
 #saved-log .item-container {
