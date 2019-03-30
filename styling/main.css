@@ -241,12 +241,13 @@ body {
     width: 250px;
     min-width: 45%;
     min-height: 150px;
-    padding: .3em;
-    margin: 1em .8em .8em .8em;
+    padding: .8em;
+    margin: 1.5em .8em 1.5em .8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .item-container h1 {
-    padding-top: 30px !important;
     font-size: 27px;
     padding: .2em;
     margin: 0;
