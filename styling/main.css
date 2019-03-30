@@ -129,7 +129,10 @@ body {
     min-height: 100%;
 }
 
-#screen-main {}
+#screen-main {
+    max-height: 80%;
+    overflow-y: scroll;
+}
 
 #screen-cart {
     background: #f6f6f9;
@@ -221,12 +224,11 @@ body {
 /* LANDING: ITEM SELECTION */
 
 #selection-area {
-    position: fixed;
+    display: block;
     height: 200px;
     background: #fff;
     width: 100%;
     z-index: 999;
-    transform: translateY(0%);
 }
 
 
