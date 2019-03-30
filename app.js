@@ -34,7 +34,7 @@ function createItemdb() {
 
     // Generate transactions
 
-    var trans_items = firebase.database().ref('users/foo/transaction/');
+    var trans_items = firebase.database().ref('users/foo/transaction/').orderByChild("dateAdded").limitToLast(1);
 
     trans_items.once("value", function (snapshot) {
         var logcontent = [];
@@ -220,6 +220,7 @@ function writeLog() {
 
     var thetime = Date.now()
 
+    $(".log-container").text("");
     var transkey = database.ref('users/foo/transaction').push().key;
     console.log(transkey);
     database.ref('users/foo/transaction/' + transkey).child('time').set(thetime);
