@@ -15,12 +15,12 @@ body {
     bottom: 0;
     right: 0;
     width: 95%;
-    max-height: 90%;
-    overflow-y: scroll;
+    max-height: 95%;
     margin: 2em auto;
     border-radius: 6px;
     box-shadow: 0px 30px 35px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -122,16 +122,19 @@ body {
 
 
 .wrapper-screen {
-    float: left;
+    position: relative;
     clear: both;
     box-sizing: border-box;
     width: 100%;
-    min-height: 100%;
+    display: block;
+    max-height: 80% !important;
+    height: 80%;
+    padding-bottom: 2em;
+    overflow-y: scroll;
 }
 
 #screen-main {
-    max-height: 80%;
-    overflow-y: scroll;
+    display: inline-block;
 }
 
 #screen-cart {
@@ -225,10 +228,12 @@ body {
 
 #selection-area {
     display: block;
-    height: 200px;
-    background: #fff;
+    max-height: 20%;
+    height: 210px;
+    background: #f7f6f4;
     width: 100%;
     z-index: 999;
+    border-radius: 20px;
 }
 
 
