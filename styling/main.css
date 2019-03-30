@@ -238,8 +238,8 @@ body {
     bottom: 0;
     left: 0px;
     display: block;
-    max-height: 20%;
-    height: 210px;
+    max-height: 28%;
+    height: 220px;
     background: #f7f6f4;
     width: 100%;
     z-index: 999;
@@ -264,7 +264,7 @@ body {
 .item-container {
     background: #fff;
     display: inline-block;
-    min-width: 350px;
+    width: 90%;
     min-height: 150px;
     padding: .8em;
     margin: 1.5em .8em 1.5em .8em;
@@ -273,9 +273,13 @@ body {
 }
 
 .item-container h1 {
-    font-size: 4.6em;
-    padding: .2em;
+    font-size: 5.3em;
+    margin-top: 1em;
     margin: 0;
+    float: left;
+    margin-left: -1em;
+    width: 40%;
+    margin-right: .5em;
 }
 
 .item-container p {
@@ -291,6 +295,7 @@ body {
 .item-inner-desc {
     font-size: 14px;
     color: #444;
+    float: left;
 }
 
 
@@ -302,7 +307,8 @@ body {
 
 .item-stat-qty,
 .item-stat-price {
-    font-size: 12px;
+    font-size: 19px;
+    padding: .5em;
 }
 
 .item-stat-qty {
@@ -331,8 +337,8 @@ body {
     width: 70px;
     height: 15px;
     margin-left: .3em;
-    margin-bottom: .3em;
-    padding: .2em;
+    margin-bottom: 3em;
+    padding: .7em;
     text-shadow: 0 0 20px #ccc;
     color: #626067;
 }
@@ -346,7 +352,7 @@ body {
     display: inline-block;
     width: 70px;
     height: 15px;
-    padding: .1em;
+    padding: .7em;
     text-shadow: 0 0 20px #ccc;
     color: #626067;
 }
@@ -354,6 +360,9 @@ body {
 
 .item-inner-select {
     padding-top: 1em !important;
+    float: right;
+    width: 40%;
+    margin-left: 5em;
 }
 
 .item-inner-option {
@@ -374,7 +383,8 @@ body {
     border: 0;
     font-family: "Sailec";
     background: 0;
-    font-size: 11px;
+    font-size: 18px;
+    margin: 0;
 
 }
 
@@ -393,7 +403,6 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 
-
 }
 
 .item-option-add {
@@ -406,11 +415,11 @@ body {
     clear: both;
     color: #fff;
     display: inline-block;
-    width: 250px;
+    width: 180px;
+    height: 180px !important;
     border-radius: 5px;
     border: 0;
     margin-top: .3em;
-    height: 50px;
 }
 
 
@@ -420,14 +429,14 @@ body {
 
 .item-list {
     display: inline-block;
-    width: 250px;
+    width: 320px;
     height: 30px;
     margin: 1em .6em 1em .6em;
 }
 
 
 .item-list h1 {
-    font-size: 18px;
+    font-size: 2.4em;
     margin: .2em;
     float: left;
 }
@@ -438,7 +447,7 @@ body {
 
 .item-list .item-stat-qty {
     float: right;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 /* form*/
@@ -462,8 +471,8 @@ body {
 
 .selection-area-button {
     display: inline-block;
-    width: 20%;
-    font-size: 22px;
+    width: 25%;
+    font-size: 42px !important;
     height: 100%;
     text-align: center;
     line-height: 180px;
