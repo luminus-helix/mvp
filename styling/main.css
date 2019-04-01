@@ -262,24 +262,25 @@ body {
 
 /* ITEM CONTAINERS */
 .item-container {
+    position: relative;
     background: #fff;
     display: inline-block;
     width: 90%;
     min-height: 150px;
     padding: .8em;
-    margin: 1.5em .8em 1.5em .8em;
-    border: 1px solid #ccc;
+    margin: .5em .8em .5em .8em;
+    border: 0 solid #ccc;
     border-radius: 5px;
 }
 
 .item-container h1 {
-    font-size: 3.8em;
-    margin-top: 1em;
-    margin: 0;
+    font-size: 3.6em;
+    margin-top: .5em;
+    margin-left: .3em;
     float: left;
-    margin-left: -1em;
-    width: 40%;
-    margin-right: .5em;
+    line-height: 1.1em;
+    position: absolute;
+    width: 55%;
 }
 
 .item-container p {
@@ -336,7 +337,7 @@ body {
     width: 70px;
     height: 15px;
     margin-left: .3em;
-    margin-bottom: 3em;
+    margin-bottom: .2em;
     padding: .7em;
     text-shadow: 0 0 20px #ccc;
     color: #c5c8cc;
@@ -346,7 +347,7 @@ body {
     font-family: "Roboto Mono";
     float: right;
     margin-right: .3em;
-    margin-bottom: .3em;
+    margin-bottom: .2em;
     display: inline-block;
     width: 70px;
     height: 15px;
@@ -359,7 +360,9 @@ body {
 .item-inner-select {
     padding-top: 1em !important;
     float: right;
-    width: 40%;
+    width: 35%;
+    position: absolute;
+    right: 0;
     margin-left: 5em;
 }
 
@@ -413,9 +416,8 @@ body {
     clear: both;
     color: #fff;
     display: inline-block;
-    width: 140px;
-    height: 140px !important;
-    border-radius: 5px;
+    width: 110px;
+    height: 110px !important;
     border: 0;
     margin-top: .3em;
     border-radius: 100%;
