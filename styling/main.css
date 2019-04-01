@@ -317,7 +317,7 @@ body {
 
 .item-stat-qty::before {
     font-weight: 800;
-    color: #47415b;
+    color: #878b91;
     font-family: "Work Sans";
     content: "# ";
 }
@@ -340,7 +340,7 @@ body {
     margin-bottom: 3em;
     padding: .7em;
     text-shadow: 0 0 20px #ccc;
-    color: #626067;
+    color: #c5c8cc;
 }
 
 .item-container .item-stat-price {
