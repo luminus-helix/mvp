@@ -74,7 +74,7 @@ createItemdb();
 
 
 function itemFormatter(id, light, name, price, qty, datapos) {
-    var dlgasdgl = "<div class='item-container item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div></p><br><br><h1 id='item-inner-name' align='left'>" + name + "</h1><span class='item-inner-select'><button class='item-inner-option item-option-add' onclick='itemSelect(\"add\", itemdata[" + datapos + "]);'>Add Item</button>&nbsp;<br><br><button class='item-inner-option item-option-sub' onclick='itemSelect(\"sub\", itemdata[" + datapos + "]);'>Remove Item</button> </div>";
+    var dlgasdgl = "<div class='item-container item-light-" + light + " item-id-" + id + "' data-itemid=" + id + " data-itemqty=" + qty + "><p class='item-inner-desc'></p><div class='item-stat-qty'>" + qty + "</div> &nbsp; <div class='item-stat-price'>" + price + "</div></p><br><br><h1 id='item-inner-name' align='left'>" + name + "</h1><span class='item-inner-select'><button class='item-inner-option item-option-add' onclick='itemSelect(\"add\", itemdata[" + datapos + "]);'><i style='font-size:48px;' class='fa fa-plus'></i></button>&nbsp;<br><br><button class='item-inner-option item-option-sub' onclick='itemSelect(\"sub\", itemdata[" + datapos + "]);'>Remove Item</button> </div>";
     return dlgasdgl;
 }
 
